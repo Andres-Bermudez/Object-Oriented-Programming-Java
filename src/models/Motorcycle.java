@@ -1,3 +1,5 @@
+package models;
+
 public class Motorcycle extends Vehicle {
 
     // Constructor de una motocicleta

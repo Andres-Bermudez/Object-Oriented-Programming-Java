@@ -1,3 +1,5 @@
+package models;
+
 import java.util.ArrayList;
 
 public class Customer {
@@ -11,7 +13,7 @@ public class Customer {
     }
 
     // Comprar un vehiculo
-    protected void buyVehicle(Vehicle vehicle, boolean status) {
+    public void buyVehicle(Vehicle vehicle, boolean status) {
         if (status) {
             collectionVehicles.add(vehicle);
             System.out.println("$$$ The customer has purchased a vehicle.");
@@ -19,7 +21,7 @@ public class Customer {
     }
 
     // Vender vehiculo
-    protected void sellVehicle(Vehicle vehicle, boolean status) {
+    public void sellVehicle(Vehicle vehicle, boolean status) {
         if (status) {
             collectionVehicles.remove(vehicle);
             System.out.println(">>> The customer has sold a vehicle.");
@@ -27,7 +29,7 @@ public class Customer {
     }
 
     // Ver vehiculos del cliente
-    protected void showVehicles() {
+    public void showVehicles() {
         System.out.println("Your Vehicles: ");
         for (Vehicle i : collectionVehicles) {
             System.out.println("    - " + i.getBrand() +  " " + i.getReference());
@@ -37,7 +39,7 @@ public class Customer {
     // Ver datos del cliente
     @Override
     public String toString() {
-        return "Customer{" +
+        return "models.Customer{" +
                 "Id: " + id +
                 "\nName: '" + name +
                 "\nVehicles: " + collectionVehicles +

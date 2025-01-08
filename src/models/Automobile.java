@@ -1,3 +1,5 @@
+package models;
+
 public class Automobile extends Vehicle {
 
     // Constructor de un automovil
